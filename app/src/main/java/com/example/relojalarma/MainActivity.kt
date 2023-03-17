@@ -13,9 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         clockTC = findViewById(R.id.idTCClock)
-
-        // on below line we are setting 12 hour
-        // format for our text clock
         clockTC.format12Hour = "HH:mm:ss a"
     }
 }
