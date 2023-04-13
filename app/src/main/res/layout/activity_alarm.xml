@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -20,24 +20,36 @@
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TimePicker
+                android:id="@+id/idtime_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TimePicker>
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="agregarAlarma"
+                android:text="Agregar" />
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-
-    <TimePicker
-        android:id="@+id/idtime_picker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </TimePicker>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="50sp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="122dp"
-        android:layout_height="wrap_content"
-        android:text="Agregar"
-        android:onClick="agregarAlarma"
-        android:layout_gravity="center"/>
-
 </LinearLayout>

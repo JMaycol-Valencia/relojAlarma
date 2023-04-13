@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50sp" />
             <TextClock
-                android:id="@+id/idhora_principal"
+                android:id="@+id/idhora2_principal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -42,8 +42,160 @@
                 android:textStyle="bold" />
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="200sp" />
+                android:layout_height="20sp" />
         </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginBottom="50sp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <LinearLayout
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:background="#94881442"
+               android:orientation="horizontal">
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="08:00"
+                       android:textColor="#000000"
+                       android:textSize="34sp"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="Alarma 1"
+                       android:textColor="#514D4D"
+                       android:textSize="24sp" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="#94148860"
+               android:orientation="horizontal">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="08:00"
+                       android:textColor="#000000"
+                       android:textSize="34sp"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="Alarma 1"
+                       android:textColor="#514D4D"
+                       android:textSize="24sp" />
+               </LinearLayout>
+           </LinearLayout>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <LinearLayout
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:background="#94148860"
+               android:orientation="horizontal">
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="08:00"
+                       android:textColor="#000000"
+                       android:textSize="34sp"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="Alarma 1"
+                       android:textColor="#514D4D"
+                       android:textSize="24sp" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="#94148860"
+               android:orientation="horizontal">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="08:00"
+                       android:textColor="#000000"
+                       android:textSize="34sp"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:paddingStart="35sp"
+                       android:text="Alarma 1"
+                       android:textColor="#514D4D"
+                       android:textSize="24sp" />
+               </LinearLayout>
+           </LinearLayout>
+
+       </LinearLayout>
+   </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,16 +204,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_color"
-                    android:layout_width="157dp"
-                    android:layout_height="51dp"
-
-                    android:layout_marginEnd="52dp"
-                    android:layout_marginBottom="28dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50sp"
                     android:onClick="cambiarColor"
                     android:text="Button" />
 
@@ -69,13 +220,10 @@
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="48dp"
-                    android:layout_marginBottom="28dp"
                     android:onClick="menuNavigation"
                     android:text="Agregar +" />
 
             </LinearLayout>
-
         </LinearLayout>
 
     </LinearLayout>
