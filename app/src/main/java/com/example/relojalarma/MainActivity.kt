@@ -19,15 +19,17 @@ import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var horaPrincipal: TextClock
+//    lateinit var horaPrincipal: TextClock
+    private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        horaPrincipal = findViewById(R.id.idhora_principal)
-        horaPrincipal.format12Hour = "HH:mm:ss a"
+//        horaPrincipal = findViewById(R.id.idhora_principal)
+//        horaPrincipal.format12Hour = "HH:mm:ss a"
         /* DE LA SIG FORMA PODEMOS AGREGAR NUESTRAS FUNCIONES A NUESTROS BOTONES
         val btnColor : Button = findViewById(R.id.btn_color)
         val txtPrincipal : TextView = findViewById(R.id.idtext_principal)
@@ -36,6 +38,16 @@ class MainActivity : AppCompatActivity() {
             txtPrincipal.setTextColor(android.graphics.Color.MAGENTA)
         }
         */
+
+        tabLayout = findViewById(R.id.tab_layout)
+        viewPager = findViewById(R.id.view_pager)
+
+        val adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter.addFragment(MenuFragment(), "Menu")
+        adapter.addFragment(AlarmFragment(), "Alarmas")
+        adapter.addFragment(TemporizadorFragment(), "Cronometro")
+        viewPager.adapter = adapter
+        tabLayout.setupWithViewPager(viewPager)
     }
 
     fun cambiarColor(view: View){
@@ -50,10 +62,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    class MyPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+    class ViewPagerAdapter(fragmentManager: FragmentManager) :
+        FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
         private val fragmentList = mutableListOf<Fragment>()
-        private val fragmentTitleList = mutableListOf<String>()
+        private val titleList = mutableListOf<String>()
 
         override fun getItem(position: Int): Fragment {
             return fragmentList[position]
@@ -64,13 +77,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun getPageTitle(position: Int): CharSequence? {
-            return fragmentTitleList[position]
+            return titleList[position]
         }
 
         fun addFragment(fragment: Fragment, title: String) {
             fragmentList.add(fragment)
-            fragmentTitleList.add(title)
+            titleList.add(title)
         }
-
     }
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TemporizadorFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temporizador"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="5sp"/>
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format12Hour="00:00:00"
+            android:format24Hour="00:00:00"
+            android:textSize="80sp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="30sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="50sp">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iniciar"
+                android:textSize="18sp"
+                android:layout_marginEnd="20sp"/>
+
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detener"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

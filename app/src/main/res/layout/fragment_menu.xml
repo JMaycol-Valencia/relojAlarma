@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="5sp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +30,7 @@
                 android:textStyle="bold" />
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="50sp" />
+                android:layout_height="5sp" />
             <TextClock
                 android:id="@+id/idhora2_principal"
                 android:layout_width="match_parent"
@@ -38,8 +39,10 @@
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="90dp"
-                android:textStyle="bold" />
+                android:textSize="70dp"
+                android:textStyle="bold"
+                android:format24Hour="HH:mm:ss"
+                android:format12Hour="hh:mm:ss a"/>
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20sp" />
@@ -49,7 +52,8 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical"
-       android:layout_marginBottom="50sp">
+       android:layout_marginBottom="50sp"
+       android:layout_marginTop="30sp">
 
        <LinearLayout
            android:layout_width="match_parent"
@@ -200,7 +204,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="40sp">
 
             <LinearLayout
                 android:layout_width="match_parent"

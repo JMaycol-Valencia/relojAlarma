@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextClock
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,6 +22,7 @@ class MenuFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var textClock: TextClock
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +40,11 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false)
+        val view = inflater.inflate(R.layout.fragment_menu, container, false)
+        textClock = view.findViewById(R.id.idhora2_principal)
+        textClock.setFormat24Hour("HH:mm:ss")
+        //textClock.setFormat12Hour("hh:mm a")
+        return view
 
     }
 
